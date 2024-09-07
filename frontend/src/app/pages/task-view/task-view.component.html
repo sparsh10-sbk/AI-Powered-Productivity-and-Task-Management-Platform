@@ -1,0 +1,83 @@
+
+<div class="priority-section">
+  <button class="priority-button" (click)="togglePriorityForm()">Set Priority</button>
+  
+  <div *ngIf="isPriorityFormVisible" class="priority-form">
+    <table>
+      <thead>
+        <tr>
+          <th>Task Description</th>
+          <th>Priority</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks; let i = index">
+          <td>
+            <input type="text" [(ngModel)]="task.description" placeholder="Enter Task Description">
+          </td>
+          <td>
+            <input type="number" [(ngModel)]="task.priority" placeholder="Enter Priority">
+          </td>
+          <td>
+            <button (click)="removeTask(i)" class="task-delete-button">❌</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="save-button" (click)="savePriorities()">Save Priorities</button>
+    <button class="add-task-button" (click)="addTask()">+ Add More Task</button>
+  </div>
+</div>
+
+<!-- Saved Tasks -->
+<div class="task-list" *ngIf="savedTasks.length > 0">
+  <div *ngFor="let task of savedTasks" class="task-item" [ngClass]="{'completed': task.completed}">
+    <p>Task: {{ task.description }} - Priority: {{ task.priority }} - Time Left: {{ task.timeLeft }} days</p>
+    <button (click)="completeTask(task)" class="task-complete-button">✔️</button>
+    <button (click)="deleteTask(task)" class="task-delete-button">❌</button>
+  </div>
+</div>
+
+<!-- Duration Section -->
+<div class="duration-section">
+  <button class="duration-button" (click)="toggleDurationForm()">Set Duration</button>
+
+  <div *ngIf="isDurationFormVisible" class="duration-form">
+    <table>
+      <thead>
+        <tr>
+          <th>Task Description</th>
+          <th>Duration Left (Days)</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks; let i = index">
+          <td>{{ task.description }}</td>
+          <td>
+            <input type="number" [(ngModel)]="task.timeLeft" placeholder="Enter Days">
+          </td>
+          <td>
+            <button (click)="removeTask(i)" class="task-delete-button">❌</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="save-duration-button" (click)="saveDurations()">Save Durations</button>
+  </div>
+</div>
+
+<!-- Saved Durations -->
+<div class="task-list" *ngIf="savedDurations.length > 0">
+  <div *ngFor="let task of savedDurations" class="task-item">
+    <p>{{ task.description }} - Duration Left: {{ task.timeLeft }} days</p>
+  </div>
+</div>
+<!-- Add this to the bottom of task-view.component.html -->
+<div class="button-container">
+  <button (click)="goToNewsfeed()">Go to Newsfeed</button>
+  <button (click)="goToLogin()">Logout</button>
+</div>
+
+

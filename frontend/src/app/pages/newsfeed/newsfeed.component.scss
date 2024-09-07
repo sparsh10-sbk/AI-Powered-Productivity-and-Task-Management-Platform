@@ -1,0 +1,137 @@
+/* Container for the whole page */
+/* Style for newsfeed heading */
+.heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #003366;
+  }
+  
+  /* News container styling */
+  .news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* News card styling */
+  .news-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .news-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .news-source {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .news-description {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Remove news button */
+  .remove-btn {
+    align-self: flex-end;
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Interest list styling */
+  .interest-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .interest-item {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .remove-interest-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .remove-interest-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Add interest section styling */
+  .add-interest-section {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .interest-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .add-interest-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-interest-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Navigation buttons styling */
+  .navigation-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .nav-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    background-color: #0056b3;
+  }
+  
+  

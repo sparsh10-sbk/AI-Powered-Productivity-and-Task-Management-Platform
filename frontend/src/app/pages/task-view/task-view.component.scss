@@ -1,0 +1,217 @@
+@import '../../../main-styles.scss';
+.centered-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+.task-manager-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 680px;
+    
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background: white;
+    padding: 42px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+}
+.task-list-container{
+    display: flex;
+    flex-grow: 1px;
+    flex-direction: column;
+    padding: 42px;
+    width: 650px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.title{
+    font-family: 'Lato';
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+.list-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    flex-grow: 1; 
+
+    .list-menu-item {
+        display: flex;
+
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 5px;
+
+        width: 100%;
+        color: #5f5f5f;
+        margin-bottom: 5px;
+
+        &:hover {
+            background: lightgreen;
+        }
+
+        &.is-active {
+            background-color: darkcyan;
+            color: white;
+        }
+    }
+}
+.task{
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+     &:not(.complete) {
+    cursor: pointer;
+    transition: box-shadow 0.2s ease,transform 0.2s ease;
+    &:active{
+        transform: scale(0.95);
+    }
+    &:hover{
+        box-shadow: 0 0 0 2px darkcyan;
+    }
+}
+&.complete{
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+}
+
+.priority-section, .duration-section, .task-list {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Buttons */
+  .priority-button, .duration-button, .save-button, .save-duration-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .priority-button:hover, .duration-button:hover, .save-button:hover, .save-duration-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Task list table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+  }
+  
+  td {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Task list styling */
+  .task-item {
+    background-color: #eaf2ff;
+    border-left: 4px solid #007bff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-item p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .task-complete-button, .task-delete-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .task-complete-button {
+    color: green;
+  }
+  
+  .task-delete-button {
+    color: red;
+  }
+  
+  .task-delete-button:hover {
+    color: darkred;
+  }
+  
+  .add-task-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .add-task-button:hover {
+    background-color: #218838;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:active {
+    background-color: #004494;
+  }
+  

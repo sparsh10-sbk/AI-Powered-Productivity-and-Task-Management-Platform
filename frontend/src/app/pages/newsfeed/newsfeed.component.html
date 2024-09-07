@@ -1,0 +1,31 @@
+
+  <h2 class="heading">Newsfeed</h2>
+
+  <div class="news-container">
+    <div *ngFor="let article of newsfeed" class="news-card">
+      <h3><a [href]="article.url" target="_blank">{{ article.title }}</a></h3>
+      <p class="news-source">{{ article.source.name }}</p>
+      <p class="news-description">{{ article.description }}</p>
+      <button (click)="removeNews(article)" class="remove-btn">Remove</button>
+    </div>
+  </div>
+  
+  <!-- Interest management UI -->
+  <h3 class="heading">Your Interests</h3>
+  <ul class="interest-list">
+    <li *ngFor="let interest of interests" class="interest-item">
+      {{ interest }} <button (click)="removeInterest(interest)" class="remove-interest-btn">Remove</button>
+    </li>
+  </ul>
+  
+  <div class="add-interest-section">
+    <input [(ngModel)]="newInterest" placeholder="Add New Interest" class="interest-input">
+    <button (click)="addInterest()" class="add-interest-btn">Add Interest</button>
+  </div>
+  
+  <!-- Navigation buttons -->
+  <div class="navigation-buttons">
+    <button class="nav-button" (click)="goToTasks()">Back to Tasks</button>
+    <button class="nav-button" (click)="logout()">Logout</button>
+  </div>
+  
