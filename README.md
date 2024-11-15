@@ -1,4 +1,4 @@
-# Task Management Platform
+# AI-Powered Productivity and Task Management Platform
 
 A simple task management platform built using **Angular** for the frontend and **Node.js** with **MongoDB** for the backend. The platform allows users to register, log in, add tasks, manage task duration, and receive news updates based on their interests.
 
